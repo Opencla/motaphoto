@@ -19,6 +19,14 @@ margin: 0;
 }
 
 /*HEADER*/
+.header-inner{
+height: 80px;
+align-items: center;
+display: flex;
+justify-content: space-between;
+padding: 2.8rem 0
+}
+
 .header-titles{
 margin-left: 46px;
 
@@ -28,6 +36,103 @@ body:not(.overlay-header):not(.overlay-header) .primary-menu > li > a{
 color: black;
 font-family: monospace;
 font-weight: 400px;
+}
+
+/*IMAGE 1 FRONT-PAGE*/
+.image-banner > img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: 50%,50%;
+min-width: 100%;
+height: auto;
+max-height: 966px;
+}
+
+section {
+padding: 0;
+}
+
+/*TITRE PHOTOGRAPHE EVENT*/
+.image h1{
+position: absolute;
+z-index: 1;
+color: transparent;
+font-family: monospace;
+text-transform: uppercase;
+font-style: italic;
+top:60%;
+width:100%;
+line-height: 222.18px;
+
+}
+
+@supports (-webkit-text-stroke: 2px #000000) {
+.image > h1{
+-webkit-text-stroke: 2px #ffffff;
+}
+}
+/*BOUTON CHARGER PLUS*/
+.elementor-17 .elementor-element.elementor-element-3a6c370 .premium-gallery-load-more-btn {
+text-transform: lowercase;
+background-color: transparent;
+font-family: 'Space Mono', sans-serif;
+font-weight: 400;
+color: #000000;
+background-image: linear-gradient(180deg, #D8D8D8 0%, #D8D8D8 100%);
+}
+
+/*BOUTON ENVOYER DE LA MODALE DE CONTACT*/
+.wpcf7-form-control.wpcf7-submit.has-spinner {
+color: black;
+background-color: #D8D8D8;
+font-family: 'Space Mono';
+font-size: 15px;
+justify-content: center;
+display: block;
+margin: auto;
+text-transform: lowercase;
+font-weight: 400;
+width: 250px;
+}
+
+
+/*FOOTER*/
+.footer-menu-class{
+display: flex;
+justify-content: center;
+}
+
+#site-footer a {
+text-decoration: none;
+font-family: monospace;
+color: black;
+font-size: 16px;
+font-weight: 400;
+}
+
+.footer-menu-class li{
+list-style: none;
+}
+
+#site-footer{
+padding: 0;
+}
+
+.footer-top-visible .footer-nav-widgets-wrapper, .footer-top-hidden #site-footer {
+margin-top: 0;
+}
+
+#site-footer .section-inner{
+justify-content: center;
+position: fixed;
+bottom: 5px;
+left: 0;
+width: 100%;
+text-align: center;
+padding: 20px;
+height: 40px;
+margin-left: 100px;
 }
 
 /*MODALE*/
@@ -73,13 +178,13 @@ transition: opacity 0.4s ease-out;
 
 .modal{
 width:95%;
-max-width: 500px;
-min-width: 300px;
-padding: 30px;
+max-width: 597px;
+max-height: 769px;
+padding: 15px;
 background: #fff;
-border-radius: 5px;
-position:absolute;
-top: 40%;
+border: 5px black solid;
+position:relative;
+top: 448px;
 left:50%;
 transform: translate(-50%, -50%);
 }
@@ -103,6 +208,144 @@ font-style: italic;
 }
 
 /*FORMULAIRE DE CONTACT*/
-label{
+.contact-form{
+width:253px;
+margin: auto;
+margin-top: 30px;
+
+}
+input[type="text"]{
+border-radius: 8px;
+}
+
+textarea{
+border-radius: 8px;
+}
+#text{
 font-family: "Poppins";
+}
+
+/* .wpcf7-form-control.wpcf7-submit.has-spinner{
+color: black;
+background-color: #D8D8D8;
+font-family: "monospace";
+font-size: 15px;
+justify-content: center;
+} */
+
+/*GALERIE PHOTOS*/
+
+
+.cluster{
+display: flex;
+justify-content: center; 
+gap: 10px;
+width: 100%;
+max-width: 1440px;
+margin: 0 auto 20px;
+gap: 20px;
+flex-wrap: wrap;
+text-align: center;
+justify-content: center;
+margin-left: 50px;
+}
+
+.cluster_photo{
+width: 564px;
+height: 495px;
+}
+
+.cluster_photo5{
+width: 565px; 
+height: 500px;
+margin-right: 560px;
+margin-left:-20px;
+}
+
+.cluster_photo6{
+width: 565px; 
+height: 500px;
+margin-left: 590px;
+margin-top: -520px
+}
+
+.cluster_photo7{
+margin-right: 580px;
+margin-left:0;
+margin-top: -20px;   
+}
+
+.cluster_photo8{
+width: 565px; 
+height: 500px;
+margin-left: 590px;
+margin-top: -443px
+}
+
+.cluster_photo9{
+margin-right: 580px;
+margin-left: 0;
+margin-top: -80px;  
+}
+
+.cluster_photo10{
+width: 565px; 
+height: 500px;
+margin-left: 590px;
+margin-top: -443px
+}
+
+.cluster_photo11{
+margin-right: 580px;
+margin-left:0;
+margin-top: -77px;  
+}
+
+.cluster_photo12{
+width: 565px; 
+height: 500px;
+margin-left:590px;
+margin-top: -443px
+}
+
+.cluster_photo13{
+margin-right: 580px;
+margin-left:0;
+margin-top: -77px;  
+}
+
+.cluster_photo14{
+width: 559px; 
+height: 500px;
+margin-left: 590px;
+margin-top: -443px
+}
+
+.cluster_photo15{
+margin-right: 580px;
+margin-left:0;
+margin-top: -77px;  
+}
+
+.cluster_photo16{
+width: 559px; 
+height: 500px;
+margin-left: 595px;
+margin-top: -440px
+}
+
+/*Bouton charger plus*/
+
+.btn-chargerPlus{
+background-color: #c4c4c4;
+color: #000000;
+padding: 15px 0;
+height: 50px;
+font-size: 16px;
+font-family: 'Space Mono', sans-serif;
+font-weight: 400;
+text-transform: lowercase;
+border: 0;
+border-radius: 3px;
+width: 270px;
 }
