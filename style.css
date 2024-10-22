@@ -234,6 +234,17 @@ justify-content: center;
 } */
 
 /*GALERIE PHOTOS*/
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px
+}
+
+.photo-article {
+    aspect-ratio: 1;
+    background-size: cover;
+}
+
 
 
 .cluster{

@@ -15,15 +15,22 @@ get_header();
     <?php
     $args = array(
         'post_type' => 'photo', // Type de contenu personnalisé
-        'posts_per_page' => 8,
+        'posts_per_page' => 16,
         
     );
     
     $query = new WP_Query( $args );
-    var_dump($query);
+    
     if ( $query->have_posts() ) :
         while ( $query->have_posts() ) : $query->the_post();
-        the_title();
+        ?>
+        <div style="background-image:url(<?php echo get_the_post_thumbnail_url( get_the_ID(), 'medium' ); ?>)" class="photo-article">
+        <div><?php the_title();
+        echo get_the_terms(get_the_ID(),"categorie")[0]->name;
+        ?>
+        </div>
+        </div>
+        <?php
             // 2.On récupére l'image depuis un champ personnalisé avec ACF
         //    $image = get_field('informations'); // /
         //     if( $image ) {
