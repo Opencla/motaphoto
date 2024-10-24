@@ -9,7 +9,24 @@ get_header();
         <img width="1440" height="962" src="http://localhost/motaphoto/wordpress/wp-content/uploads/2024/10/nathalie-11.jpg">
     </div>
     </section>
-
+    <!--Mes filtres-->
+    <select class="first-filter">
+        <option value="categories">CATEGORIES</option>
+        <option value="réception">Réception</option>
+        <option value="télévision">Télévision</option>
+        <option value="concert">Concert</option>
+        <option value="mariage">Mariage</option>
+    </select>
+    <select class="second-filter">
+        <option value="formats">FORMATS</option>
+        <option value="paysage">Paysage</option>
+        <option value="portrait">Portrait</option>
+    </select>
+    <select class="third-filter">
+        <option value="trier par">TRIER PAR</option>
+        <option value="a partir des plus récentes">A partir des plus récentes</option>
+        <option value="a partir des plus anciennes">A partir des plus anciennes</option>
+    </select>
     <!--Section pour la galerie des photos-->
     <section class="gallery">
     <?php
@@ -24,7 +41,7 @@ get_header();
     if ( $query->have_posts() ) :
         while ( $query->have_posts() ) : $query->the_post();
         ?>
-        <div style="background-image:url(<?php echo get_the_post_thumbnail_url( get_the_ID(), 'medium' ); ?>)" class="photo-article">
+        <div style="background-image:url(<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>)" class="photo-article">
         <div><?php the_title();
         echo get_the_terms(get_the_ID(),"categorie")[0]->name;
         ?>
