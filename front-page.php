@@ -32,7 +32,7 @@ get_header();
     <?php
     $args = array(
         'post_type' => 'photo', // Type de contenu personnalisé
-        'posts_per_page' => 16,
+        'posts_per_page' => 6,
         
     );
     
@@ -66,6 +66,7 @@ get_header();
         echo 'Aucun contenu trouvé.';
     endif;
     ?>
+    <button id="load" class="load-more"type="button">Charger plus</button>
     </section>
     
 <?php

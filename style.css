@@ -363,6 +363,20 @@ border-radius: 3px;
 width: 270px;
 }
 
+.load-more{
+background-color: #c4c4c4;
+color: #000000;
+padding: 15px 0;
+height: 50px;
+font-size: 16px;
+font-family: 'Space Mono', sans-serif;
+font-weight: 400;
+text-transform: lowercase;
+border: 0;
+border-radius: 3px;
+width: 270px;
+}
+
 /*FILTRES*/
 .first-filter{
     margin-top: 5px;
