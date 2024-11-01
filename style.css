@@ -64,6 +64,8 @@ font-style: italic;
 top:60%;
 width:100%;
 line-height: 222.18px;
+margin-left:350px;
+margin-top: 0;
 
 }
 
@@ -239,11 +241,20 @@ justify-content: center;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     color: transparent;
+    max-width : 964px; 
+    height: 964px;
+    margin-left: 246px;
+    margin-top:-50px;
+
+   
 }
 
 .photo-article {
     aspect-ratio: 1;
     background-size: cover;
+   
+    
+    
 }
 
 
@@ -374,10 +385,44 @@ font-weight: 400;
 text-transform: lowercase;
 border: 0;
 border-radius: 3px;
-width: 270px;
+width: 272px;
+position: relative;
+left: 320px;
+top: 50%;
+transform: translateY(-50%);
 }
 
+
+
 /*FILTRES*/
+.filters{
+    width: 100%;
+    column-gap: 20px;
+    row-gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    margin-left: 244px;
+}
+
+.filters-cluster{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+}
+.filters2{
+    margin-left: 750px;
+    position:relative;
+    top: -85px;      /* Distance depuis le haut de la page */
+    left: 130px;     /* Ajuster pour le placer à gauche ou à droite */
+    z-index: 1000;  /* Faire passer le bouton devant les autres éléments */
+    
+   
+    
+}
+
 .first-filter{
     margin-top: 5px;
     margin-bottom: 5px;
@@ -391,7 +436,7 @@ width: 270px;
     font-weight: 500;
     padding-bottom: 11px;
     padding-right: 24px;
-    padding-left: 24px;
+    padding-left: 45px;
 }
 
 .second-filter{
@@ -406,8 +451,8 @@ width: 270px;
     font-size: 21px;
     font-weight: 500;
     padding-bottom: 11px;
-    padding-right: 24px;
-    padding-left: 24px;
+    padding-right: 39px;
+    padding-left: 45px;
 }
 
 .third-filter{
@@ -424,4 +469,11 @@ width: 270px;
     padding-bottom: 11px;
     padding-right: 24px;
     padding-left: 24px;
+}
+
+/*Options selects*/
+.categories{
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
 }

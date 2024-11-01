@@ -10,23 +10,29 @@ get_header();
     </div>
     </section>
     <!--Mes filtres-->
+    <section class="filters">
+    <div class="filters-cluster">
     <select class="first-filter">
-        <option value="categories">CATEGORIES</option>
-        <option value="réception">Réception</option>
-        <option value="télévision">Télévision</option>
-        <option value="concert">Concert</option>
-        <option value="mariage">Mariage</option>
+        <option class="categories">CATEGORIES</option>
+        <option class="réception">Réception</option>
+        <option class="télévision">Télévision</option>
+        <option class="concert">Concert</option>
+        <option class="mariage">Mariage</option>
     </select>
     <select class="second-filter">
-        <option value="formats">FORMATS</option>
-        <option value="paysage">Paysage</option>
-        <option value="portrait">Portrait</option>
+        <option class="formats">FORMATS</option>
+        <option class="paysage">Paysage</option>
+        <option class="portrait">Portrait</option>
     </select>
+    </section>
+    <section class="filters2">
     <select class="third-filter">
-        <option value="trier par">TRIER PAR</option>
-        <option value="a partir des plus récentes">A partir des plus récentes</option>
-        <option value="a partir des plus anciennes">A partir des plus anciennes</option>
+        <option class="trier par">TRIER PAR</option>
+        <option class="a partir des plus récentes">A partir des plus récentes</option>
+        <option class="a partir des plus anciennes">A partir des plus anciennes</option>
     </select>
+    </section>
+    </section>
     <!--Section pour la galerie des photos-->
     <section class="gallery">
     <?php
