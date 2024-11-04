@@ -39,6 +39,9 @@ get_header();
     $args = array(
         'post_type' => 'photo', // Type de contenu personnalisé
         'posts_per_page' => 6,
+        'orderby'        => 'date',            // Trier par date
+        'order'          => 'DESC',            // Ordre décroissant
+    
         
     );
     
@@ -74,7 +77,7 @@ get_header();
     ?>
     <button id="load" class="load-more"type="button">Charger plus</button>
     </section>
-    
+     
 <?php
 get_footer();
 ?>
