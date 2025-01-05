@@ -277,6 +277,31 @@ justify-content: center;
     background-size: cover;
 }
 
+.post-overlay svg {
+    width: 25px;
+    
+}
+
+.post-overlay {
+    position: relative;
+}
+
+.post-overlay .js-open-lightbox {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    padding: 0;
+   
+}
+
+.eye-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    transform: translate(-50%, -50%);
+}
+
 /*Bouton charger plus*/
 
 .btn-chargerPlus{
@@ -377,4 +402,205 @@ width: 270px;
     font-family: "Poppins", sans-serif;
     font-size: 15px;
     font-weight: 500;
+}
+
+/*Lightbox*/
+
+.lightbox {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0, 0, 0, .9);
+    overflow:auto;
+    z-index:10;
+    transition: opacity .3s;
+}
+
+#lightbox__prev{
+    border:none;
+    position:fixed;
+    top:50%;
+    z-index:11;
+    cursor: pointer;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.lightbox__fadeOut{
+    opacity: 0;
+}
+
+#lightbox__prev > .prev-icon{
+    background: url(images\ p11/arrow-left-white.svg) center center/100% 100%;
+    width: 16px;
+    display: block;
+    height: 16px;
+}
+
+#lightbox__prev > p, #lightbox__next p {
+    font-size: 13px;
+    margin: 0;
+    color: white;
+}
+
+.lightbox_hidden {
+    display: none;
+}
+    
+#lightbox__next{
+    border:none;
+    position:fixed;
+    top:50%;
+    z-index:11;
+    cursor: pointer;
+    background: transparent;
+    display: flex;
+    flex-direction: row-reverse;
+    right: 0;
+    align-items: center;
+    gap: 5px;
+}
+
+#lightbox__next > .next-icon {
+    background: url(images\ p11/arrow-right-white.svg) center center/100% 100%;
+    width: 16px;
+    display: block;
+    height: 16px;
+}
+
+#lightbox__close{
+    max-width: 15px;
+    max-height: 15px;
+    background: url(images\ p11/cross-white.svg)center center/100% 100%;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 12;
+}
+
+.lightbox__container img{
+    max-width: 100%;
+    height: auto;
+    max-height: 90vh;
+    margin: auto;
+}
+
+.lightbox__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;}
+
+
+/*icon-lightbox*/
+#svg8{
+    cursor: pointer;
+    
+}
+
+/*Single-photo*/
+
+h1, .heading-size-1{
+    font-size: 66px;
+    font-weight: 800;
+    line-height: 1.138888889;
+    color: #000000;
+    font-family: "SpaceMono", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 58px;
+    text-transform: uppercase;
+    
+}
+
+p {
+    color: #000000;
+    font-family: "SpaceMono", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    line-height: 1.5;
+    margin: 0 0 1em 0;
+   
+}
+
+.single-photo-content {
+    width: 50%;
+    border-bottom: 2px solid #000000;
+}
+
+.photos-container{
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    object-fit: contain;
+    max-width: 50%;
+}
+
+.infos-container{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    
+}
+
+.contact{
+    padding: 30px;
+}
+
+
+.contact-btn{
+    background: #c4c4c4;
+    color: #000000;
+    padding: 15px 0;
+    height: 50px;
+    font-size: 12px;
+    font-family: "SpaceMono", sans-serif;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 270px;
+    margin-left:300px;
+}
+
+.contact-text{
+    margin-bottom: -30px;
+    color: #000000;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: lowercase;
+}
+
+/** Single page */ 
+.post-content {
+    display: flex;
+    max-width: 1440px;
+}   
+
+/** site_navigation arrows**/
+
+.site__navigation.flexrow{
+    padding-left: 1200px;
+}
+
+.site__navigation__next{
+    position: relative;
+    bottom: 67px;
+    left: 120px;
+}
+
+
+.site__navigation__prev{
+    
 }

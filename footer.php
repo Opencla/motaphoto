@@ -47,7 +47,8 @@
 
 			<!--La popup est présente dans la page Contact-->
 			<?php 
-        get_template_part('templates_part/contact'); 		
+        get_template_part('templates_part/contact'); 	
+		get_template_part('/templates_part/lightbox');	
     ?>
 
 		<?php wp_footer(); ?>
