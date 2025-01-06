@@ -33,44 +33,66 @@
                             le permalien et le thumbnail de la photo précédente -> dans un second temps de coder en JS le changement de photo
                             au survol des flèches
                          -->
-                         <div class="site__navigation flexrow">				
+                            <?php
+                            $prev_post = get_previous_post();	
+                            $next_post = get_next_post();
+
+                            ?>
+
+                            
+                         <div class="site__navigation flexrow">
+                            <div class="site__navigation image">
+                            <?php
+											
+                                            if($prev_post) {
+                                                $prev_post_id = $prev_post->ID;
+                                                if (has_post_thumbnail($prev_post_id)){
+                                                    ?>
+                                                    <div>
+                                                        <?php echo get_the_post_thumbnail($prev_post_id, array(77,60));?></div>
+                                                    <?php
+                                                    }
+                                                    else{
+                                                        echo '<img src="'. get_stylesheet_directory_uri() .'/images p11/arrow-left.svg" alt="Pas de photo"width="77px" ><br>';
+                                                    }							
+                                                    
+                                                }
+                                                if($next_post) {
+                                                    $next_post_id = $next_post->ID;
+                                                    if (has_post_thumbnail($next_post_id)){
+                                                    ?>
+                                                        <div><?php echo get_the_post_thumbnail($next_post_id, array(77,60));?></div>
+                                                    <?php
+                                                    }
+                                                    else{
+                                                        echo '<img src="'. get_stylesheet_directory_uri() .'/images p11/arrow-right.svg" alt="Pas de photo" width="77px" ><br>';
+                                                    }							
+                                                  
+                                                }
+                                                ?>
+                            
+                            </div>
                     <div class="site__navigation__prev">
                     <?php
-					$prev_post = get_previous_post();							
+											
 					if($prev_post) {
 						$prev_title = strip_tags(str_replace('"', '', $prev_post->post_title));
 						$prev_post_id = $prev_post->ID;
 						echo '<a rel="prev" href="' . get_permalink($prev_post_id) . '" title="' . $prev_title. '" class="previous_post">';
-						if (has_post_thumbnail($prev_post_id)){
-							?>
-							<div>
-								<?php echo get_the_post_thumbnail($prev_post_id, array(77,60));?></div>
-							<?php
-							}
-							else{
-								echo '<img src="'. get_stylesheet_directory_uri() .'/images p11/arrow-left.svg" alt="Pas de photo"width="77px" ><br>';
-							}							
-							echo '<img src="'. get_stylesheet_directory_uri() .'/images p11/arrow-left.svg" alt="Photo précédente" ></a>';
-						}
+						echo '<img src="'. get_stylesheet_directory_uri() .'/images p11/arrow-left.svg" alt="Photo précédente" ></a>';}
 						?>
 				    </div>
+                    
 
                     <div class="site__navigation__next">
 					<!-- next_post_link( '%link', '%title', false );  -->
 					<?php
-						$next_post = get_next_post();
+						
 						if($next_post) {
 							$next_title = strip_tags(str_replace('"', '', $next_post->post_title));
 							$next_post_id = $next_post->ID;
 							echo  '<a rel="next" href="' . get_permalink($next_post_id) . '" title="' . $next_title. '" class="next_post">';
-							if (has_post_thumbnail($next_post_id)){
-							?>
-								<div><?php echo get_the_post_thumbnail($next_post_id, array(77,60));?></div>
-							<?php
-							}
-							else{
-								echo '<img src="'. get_stylesheet_directory_uri() .'/images p11/arrow-right.svg" alt="Pas de photo" width="77px" ><br>';
-							}							
+									
 							echo '<img src="'. get_stylesheet_directory_uri() .'/images p11/arrow-right.svg" alt="Photo suivante" ></a>';
 						}
 					?>
