@@ -163,7 +163,7 @@
             // or la méthode eq n'accepte pas de valeur négative et revient à 0 (première photo)
             prevPhotoLink.addClass('open');
         });
-
+        
         /**
          * Objectifs simples :
          * CSS : mettre en forme correctement la lightbox ✅
